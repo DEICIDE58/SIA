@@ -53,6 +53,11 @@ POST	/api/books	    Create a new book
 PUT	    /api/books/1	  Update book by ID
 DELETE	/api/books/1	Delete book by ID
 
+Additional:
+Download
+Xammp for php and database.
+composer for downloading laravel
+Postman to test the api
 
 Contributors:
 Abendan, Princess Dianne
