@@ -30,4 +30,39 @@ class BookController extends Controller
 
         return response()->json($book);
     }
+    // Store new book
+    public function store(Request $request)
+    {
+        $book = Books::create($request->only(['name', 'summary']));
+        return response()->json($book, 201);
+    }
+
+    // Update book by ID (PUT)
+    public function update(Request $request, $id)
+    {
+        $book = Books::find($id);
+
+        if (!$book) {
+            return response()->json(["message" => "No book found for id: $id"], 404);
+        }
+
+        $book->update($request->only(['name', 'summary']));
+
+        return response()->json($book);
+    }
+
+
+    // Delete book by ID (DELETE)
+    public function destroy($id)
+    {
+        $book = Books::find($id);
+
+        if (!$book) {
+            return response()->json(["message" => "No hack found for id: $id"], 404);
+        }
+
+        $book->delete();
+
+        return response()->json(["message" => "Hack with id $id deleted successfully"]);
+    }
 }
