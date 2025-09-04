@@ -11,3 +11,6 @@ Route::get('/user', function (Request $request) {
 Route::get('/book', [BookController::class, 'getAll']);
 Route::get('/book/random', [BookController::class, 'getRandom']);
 Route::get('/book/id/{id}', [BookController::class, 'getById']);
+Route::post('/book', [BookController::class, 'store']);
+Route::put('/book/id/{id}', [BookController::class, 'update']);
+Route::delete('/book/id/{id}', [BookController::class, 'destroy']);
