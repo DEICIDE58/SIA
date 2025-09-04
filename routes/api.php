@@ -9,3 +9,5 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/book', [BookController::class, 'getAll']);
+Route::get('/book/random', [BookController::class, 'getRandom']);
+Route::get('/book/id/{id}', [BookController::class, 'getById']);
