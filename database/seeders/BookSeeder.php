@@ -11,7 +11,7 @@ class BookSeeder extends Seeder
     {
         $books = [
             ['name' => 'Harry Potter', 'summary' => 'A boy with sunglasses.'],
-
+            ['name' => 'Lord of the Rings', 'summary' => 'A guy with a ring.'],
         ];
 
         foreach ($books as $book) {
@@ -19,3 +19,4 @@ class BookSeeder extends Seeder
         }
     }
 }
+
